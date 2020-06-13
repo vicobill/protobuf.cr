@@ -317,7 +317,7 @@ module Protobuf
       # guard against recursive structs
       structure = !message_type.field.nil? && message_type.field.not_nil!.any? { |f| f.type_name && f.type_name.not_nil!.split(".").last == message_type.name } ? "class" : "struct"
 
-      puts "#{structure} #{message_type.name}"
+      puts "#{structure} #{message_type.name.capitalize}"
 
       indent do
         puts "include Protobuf::Message"
