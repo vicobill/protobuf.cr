@@ -3,6 +3,7 @@ version: 2.2.1
 
 authors:
   - Jerome Gravel-Niquet <jeromegn@gmail.com>
+  - Vico Bill <vicobill@hotmail.com>
 
 scripts:
   postinstall: shards build
