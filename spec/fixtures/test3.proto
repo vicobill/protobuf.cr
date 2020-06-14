@@ -26,6 +26,24 @@ message Test3 {
     float float = 21;
 }
 
+message snake_case_msg_name{
+    string text = 1;
+}
+
+message SCREAM_SNAKE_CASE_MSGNAME {
+    string text = 1;
+}
+
+message ALLUPCASEMSGNAME {
+    string text = 1;
+}
+
+message camelCaseMessageName {
+    SCREAM_SNAKE_CASE_MSGNAME msg = 1;
+    snake_case_msg_name  msg2 = 2;
+    ALLUPCASEMSGNAME msg3 = 3;
+}
+
 message Pair {
     string key = 1;
     string value = 2;
