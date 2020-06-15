@@ -360,7 +360,7 @@ module Protobuf
         t = t.gsub(/^\.{0,}#{to_strip[0]}/, "#{to_strip[1]}") if to_strip
         t.gsub(/^\.*/, "").split(".").map(&.downcase).map(&.camelcase).join("::")
       else
-        ":#{field.type.to_s.sub(/^TYPE/, "").downcase}"
+        ":#{field.type.to_s.sub(/^TYPE_/, "").downcase}"
       end
 
       field_desc = "#{met} :#{field.name.not_nil!.underscore}, #{type_name}, #{field.number}"
