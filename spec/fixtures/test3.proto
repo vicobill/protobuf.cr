@@ -30,7 +30,7 @@ message snake_case_msg_name{
     string text = 1;
 }
 
-message SCREAM_SNAKE_CASE_MSGNAME {
+message SCREAM_SNAKE_CASE_MSG_NAME {
     string text = 1;
 }
 
@@ -38,10 +38,20 @@ message ALLUPCASEMSGNAME {
     string text = 1;
 }
 
+message alllowercasemsgname {
+    string text = 1;
+}
+
+message SCMessageName {
+    string text = 1;
+}
+
 message camelCaseMessageName {
-    SCREAM_SNAKE_CASE_MSGNAME msg = 1;
+    SCREAM_SNAKE_CASE_MSG_NAME msg = 1;
     snake_case_msg_name  msg2 = 2;
     ALLUPCASEMSGNAME msg3 = 3;
+    SCMessageName msg4 = 4;
+    alllowercasemsgname msg5 = 5;
 }
 
 message Pair {

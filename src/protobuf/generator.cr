@@ -317,7 +317,7 @@ module Protobuf
       # guard against recursive structs
       structure = !message_type.field.nil? && message_type.field.not_nil!.any? { |f| f.type_name && f.type_name.not_nil!.split(".").last == message_type.name } ? "class" : "struct"
 
-      structure_name = message_type.name.not_nil!.split('_').map(&.downcase).map(&.camelcase).join
+      structure_name = message_type.name.not_nil!.split('_').map(&.camelcase).join
       puts "#{structure} #{structure_name}" # obl: 强制将所有数据都为camelcase
 
       indent do
@@ -358,7 +358,7 @@ module Protobuf
           t.match(/\.{0,}#{k}/)
         end
         t = t.gsub(/^\.{0,}#{to_strip[0]}/, "#{to_strip[1]}") if to_strip
-        t.gsub(/^\.*/, "").split(".").map(&.downcase).map(&.camelcase).join("::")
+        t.gsub(/^\.*/, "").split(".").map(&.camelcase).join("::")
       else
         ":#{field.type.to_s.sub(/^TYPE_/, "").downcase}"
       end
